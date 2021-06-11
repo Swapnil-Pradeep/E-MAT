@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600&family=Open+Sans+Condensed:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto+Slab:wght@400;500;600&display=swap');
+
+:root {
+	--primary-color: #3d6cb9;
+	--secondary-color: #9c1de7;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	/*background: rgb(206, 112, 112);
+	font-family: 'Hind', sans-serif;*/
+	background-image: url("/images/f_new.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+	background-size: 1700px 1000px;
+	background-position-y: 30px;
+}
+
+.navbar-dark .navbar-brand {
+	font-size: 1.5em;
+	font-weight: 500;
+	font-family: 'Roboto Slab', serif;
+}
+
+.bg-dark {
+	background-color: var(--primary-color) !important;
+}
+
+.head {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 400;
+	text-align: center;
+	padding: 0.7em;
+	border-radius: 4px;
+	margin-top: 0;
+}
+
+.image {
+	background: white;
+	border-radius: 4px;
+}
+
+.welcome {
+	margin-top: 0;
+}
+
+.headline {
+	padding: 1rem;
+	padding-top: 0;
+	margin: 0;
+	font-family: 'Open Sans Condensed', sans-serif;
+	letter-spacing: 1.4px;
+	font-weight: 800;
+	color: navy;
+	font-size: 1.3em;
+	margin-left: 20px;
+}
+
+img {
+	padding: 20px;
+	padding-bottom: 0;
+}
+
+.home {
+	padding: 1em;
+	padding-bottom: 60px;
+	border-radius: 5px;
+	text-align: center;
+	background: #e8e8e8;
+}
+
+.one {
+	background: orange;
+}
+
+.two {
+	background: lightblue;
+}
+
+.three {
+	background: lightcoral;
+}
+
+.all h1 {
+	text-align: center;
+}
+
+.all {
+	border-radius: 5px;
+}
+
+.thumbnail {
+	background: lightgrey;
+	border: 1px solid white;
+	text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+#custom-button {
+	background-color: var(--primary-color);
+	border: var(--primary-color);
+}
+
+#custom-button:hover {
+	background-color: #2d5391;
+}
+
+.was-validated .form-control:valid,
+.was-validated .form-control:invalid {
+	background-image: none;
+}
+
+.required::after {
+	content: "*";
+}
+
+#delete-button {
+	border: none;
+	background: none;
+}
+
+#delete-button:hover {
+	background-color: rgb(168, 7, 7);
+	border-radius: 50%;
+	color: #fff;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* height: 60px; */
+	line-height: 60px;
+	background: transparent;
+	font-family: 'Noto Sans', sans-serif;
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+}
+
+.test {
+	position: relative;
+}
+
+.TL{
+	position: absolute;
+	top: 100px;
+	left: 800px;
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 50px;
+ }
+

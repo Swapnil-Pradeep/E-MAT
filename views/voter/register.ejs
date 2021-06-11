@@ -1,0 +1,85 @@
+<%- include('../partials/header'); -%>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col"> </div>
+        <div class="col-sm-7 col-md-6 col-lg-5">
+            <div class="card shadow-lg mb-5 pb-0 border-0">
+                <div class="card-body">
+                    <h1 class="card-title text-center">Register</h1>
+                    <form class="needs-validation" action="/register" method="POST" novalidate>
+                        <p><small class="text-danger">Feilds marked * are required.</small></p>
+                        <div class="form-group">
+                            <label class="required" for="username">Name</label>
+                            <input type="text" class="form-control" name="voter[name]" placeholder="Amit Joshi" required autofocus>
+                            <div class="invalid-feedback">
+                                Please enter your name.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="required" for="username">Email</label>
+                            <input type="text" class="form-control" name="voter[email]" placeholder="amit@mail.com" required>
+                            <div class="invalid-feedback">
+                                Please provide an email.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="required" for="username">Aadhar Number</label>
+                            <input type="number" class="form-control" name="voter[username]" placeholder="1234 5678 9012" required>
+                            <div class="invalid-feedback">
+                                Please enter your aadhar number.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="required" for="username">Age</label>
+                            <input type="number" class="form-control" name="voter[age]" required>
+                            <div class="invalid-feedback">
+                                Please enter your age.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="required">Gender</label>
+                            <select class="form-control" name="voter[gender]" required>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="required">Constituency</label>
+                            <select class="form-control" name="voter[constituency]" required>
+                                <option value="Varanasi">Varanasi</option>
+                                <option value="Worli">Worli</option>
+                                <option value="Amethi">Amethi</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="required" for="password">Password</label>
+                            <input type="password" class="form-control" name="password" required>
+                            <div class="invalid-feedback">
+                                Please enter password.
+                            </div>
+                        </div>
+                        <button id="custom-button" class="btn btn-primary btn-block">Register</button>
+                        <p class="text-center mt-2 mb-0">Have an account? <a href="/login">Login</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col"> </div>
+    </div>
+</div>
+
+<!-- <script>
+    var age = document.querySelector(".age");
+    var button = document.querySelector(".mybt");
+
+    button.addEventListener("click", function(e){
+        if(age.value < 18){
+            alert("Age must be 18 or above!")
+        }
+    });
+</script> -->
+
+<!-- <li><a href="/logout">Logout</a></li> -->
+
+<%- include('../partials/footer'); -%>

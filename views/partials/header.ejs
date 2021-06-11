@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Votechain</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav id="custom-navbar" class="navbar navbar-expand-xl navbar-dark bg-dark">
+            
+                <div class="test">
+                    <a href="/"><img src= "/images/eci.png" height="10%" width="100%" class="navbar-brand"></a>
+                </div> 
+                <button class="navbar-toggler border-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link" id="vote" href="/vote" style="font-size:25px">Vote</a></li>
+                        <li class="nav-item"><a class="nav-link" id="results" href="/results" style="font-size:25px">Results</a></li>
+                        <% if(currUser && currUser.username == 'admin') {%>
+                                <li class="nav-item"><a class="nav-link" id="admin" href="/candidates" style="font-size:25px">Admin</a></li>
+                        <% }else { %>
+                                <li class="nav-item"><a class="nav-link" id="admin" href="/login/admin" style="font-size:25px">Admin</a></li>
+                        <% } %>
+                    </ul>
+    
+                    <ul class="navbar-nav ml-auto">
+                    <% if(!currUser) {%>
+                            <li class="nav-item"><a class="nav-link" id="login" href="/login" style="font-size:25px">Login</a></li>
+                            <li class="nav-item"><a class="nav-link" id="register" href="/register" style="font-size:25px">Register</a></li>
+                        <% } else{ %>
+                            <li class="nav-item"><a class="nav-link" href="/logout" style="font-size:25px">Logout</a></li>
+                            <% } %>
+                    </ul>
+                </div>
+            
+        </nav>
+
+        <div class="container">
+            <% if(error && error.length > 0) { %>
+                <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+                    <%= error %>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <% } %>
+            <% if(success && success.length > 0) { %>
+                <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+                    <%= success %>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            <% } %>
+        </div>    

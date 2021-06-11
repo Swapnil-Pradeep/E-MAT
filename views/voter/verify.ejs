@@ -1,0 +1,27 @@
+<%- include('../partials/header'); -%>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col"> </div>
+        <div class="col-sm-7 col-md-6 col-lg-4">
+            <div class="card shadow-lg border-0 pb-2">
+                <div class="card-body">
+                    <h2 class="card-title text-center">Verify Account</h2>
+                    <form class="needs-validation" action="/verify" method="POST" novalidate>
+                        <div class="form-group">
+                            <label for="username">OTP Password</label>
+                            <input type="text" class="form-control" name="secretToken" placeholder="6abe23" required>
+                            <div class="invalid-feedback">
+                                Please enter OTP password.
+                            </div>
+                        </div>
+                        <button id="custom-button" class="btn btn-primary btn-block">Verify</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col"> </div>
+    </div>
+</div>
+
+<%- include('../partials/footer'); -%>
