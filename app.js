@@ -73,7 +73,11 @@ app.get('/testing', addTwoNumbers);
 // FOR STARTING LOCALHOST SERVER AT PORT 3000
 app.listen(PORT, async () => {
 	await initContract();
+<<<<<<< HEAD
+	console.log('E-मत Server Has Started!');
+=======
 	console.log('The VoteChain Server Has Started!');
+>>>>>>> 8762be894da3d461bb7f0abd523ca0a9033608ca
 });
 
 // chainIsValid();

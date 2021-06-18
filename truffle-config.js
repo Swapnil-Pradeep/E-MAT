@@ -5,6 +5,7 @@ module.exports = {
       port: 7545,
       network_id: "*",
       gas: 3000000,
+
       from: '0xB84416673E91bbBeCB65865cc7E743caf6AdcFA4',
     },
   },
