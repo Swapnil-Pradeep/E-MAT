@@ -6,7 +6,7 @@ module.exports = {
       network_id: "*",
       gas: 3000000,
 
-      from: '0xB84416673E91bbBeCB65865cc7E743caf6AdcFA4',
+      from: '0x52D481283101582450264f0e1964E6B0B7d5679c',
     },
   },
   contracts_directory: './contracts/',

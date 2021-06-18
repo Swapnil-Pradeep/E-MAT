@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 3000;
 //------------------------- MONGODB CONNECTION -------------------------------
 const URI =
 	process.env.DATABASEURL ||
-	'mongodb://127.0.0.1:27017/votechain';
+	'mongodb://127.0.0.1:27017/emat';
 mongoose.connect(URI, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
@@ -73,11 +73,7 @@ app.get('/testing', addTwoNumbers);
 // FOR STARTING LOCALHOST SERVER AT PORT 3000
 app.listen(PORT, async () => {
 	await initContract();
-<<<<<<< HEAD
 	console.log('E-मत Server Has Started!');
-=======
-	console.log('The VoteChain Server Has Started!');
->>>>>>> 8762be894da3d461bb7f0abd523ca0a9033608ca
 });
 
 // chainIsValid();
